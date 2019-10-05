@@ -69,8 +69,11 @@ CREATE DATABASE IF NOT EXISTS TRANSPORTAPP;
 	  
 	CREATE  TABLE IF NOT EXISTS TRANSPORTAPP.OWNER_VEHICLE_MAPPING (
 	  vehicle_owner_id INT NOT NULL ,
-	  vehicle_id INT ,
-	  license_plate_no VARCHAR(15),
+	  vehicle_id INT NOT NULL ,
+	  license_plate_no VARCHAR(15) PRIMARY KEY,
+	  created_on TIMESTAMP,
+	  last_modified_by VARCHAR(100) ,
+	  last_modified_on TIMESTAMP,
 	  FOREIGN KEY (vehicle_owner_id) REFERENCES VEHICLE_OWNER(id),
 	  FOREIGN KEY (vehicle_id) REFERENCES VEHICLE(id));
 	  

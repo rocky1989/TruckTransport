@@ -1,4 +1,4 @@
-package com.truckseva.TruckTransport;
+package com.truckseva;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
